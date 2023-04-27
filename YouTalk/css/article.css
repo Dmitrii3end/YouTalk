@@ -1,0 +1,778 @@
+    * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat';
+    }
+    
+    .container {
+        max-width: 1264px;
+        padding: 0 32px;
+        margin: 0 auto;
+    }
+    
+    body {
+        height: max-content;
+        position: relative;
+    }
+    
+    .background-img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+    
+    .main {
+        margin-top: 54px;
+        padding-bottom: 48px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 1px solid #DEDEDE;
+    }
+    
+    .article {
+        max-width: 690px;
+    }
+    
+    h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: #333333;
+    }
+    
+    .article__info {
+        margin-top: 16px;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .info__author,
+    .info__date {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #494949;
+        position: relative;
+    }
+    
+    .info__date::before {
+        content: '.';
+        position: absolute;
+        left: -10px;
+        top: -4px;
+    }
+    
+    .article__main-image {
+        margin-top: 24px;
+        width: 100%;
+    }
+    
+    .article__contents {
+        margin-top: 24px;
+    }
+    
+    .contents__name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+        margin-bottom: 16px;
+    }
+    
+    .contents__list {
+        list-style-type: none;
+        max-width: 588px;
+        padding-left: 16px;
+        position: relative;
+    }
+    
+    .contents__list_first {
+        padding: 0;
+    }
+    
+    .contents__list_second {
+        padding-left: 32px;
+    }
+    
+    .contents__list_third {
+        padding-left: 24px;
+    }
+    
+    .contents__list li {
+        margin-top: 8px;
+    }
+    
+    .contents__list li a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .article__paragraph {
+        margin-top: 24px;
+    }
+    
+    .paragraph__text {
+        margin-top: 24px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .blockquote-background {
+        width: 100%;
+        margin-top: 40px;
+        background: #F3F7FE;
+        border-radius: 16px;
+        padding: 34px 24px 24px 24px;
+    }
+    
+    .blockquote__text {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+        padding-right: 5px;
+    }
+    
+    .blockquote__author {
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .paragraph__options {
+        list-style: none;
+    }
+    
+    .paragraph__options li {
+        margin-top: 16px;
+        position: relative;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .paragraph__options li::before {
+        content: "\2022";
+        position: absolute;
+        left: 0;
+        margin-left: -1em;
+        font-size: 2em;
+        line-height: 50%;
+        display: inline-block;
+        color: #03B2A5;
+    }
+    
+    .paragraph__image {
+        margin-top: 24px;
+    }
+    
+    .image__description {
+        margin-top: 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 0.25px;
+        color: #868686;
+    }
+    
+    .blockquote_center {
+        margin-top: 24px;
+        padding: 24px 104px 48px 102px;
+        background-image: url(/images/blot.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #333333;
+    }
+    
+    .paragraph__left-img-text {
+        margin-top: 24px;
+        display: flex;
+        gap: 24px;
+    }
+    
+    .left-img-text__image {
+        max-width: 282px;
+    }
+    
+    .img-text__text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .paragraph__exercise {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+        background: #FEFAEC;
+        border-radius: 16px;
+    }
+    
+    .exercise__counter {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .top-img-text__text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .paragraph__img-text {
+        margin-top: 24px;
+        display: flex;
+        gap: 24px;
+    }
+    
+    .img-text__top-img-text {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .top-img-text__image {
+        width: 100%;
+    }
+    
+    .top-img-text__text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .paragraph__end-image {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .paragraph__end-image span {
+        display: inline-block;
+        height: 1px;
+        width: 66px;
+        background-color: #0063A8;
+    }
+    
+    .paragraph__exercise_blue-background {
+        background-color: rgba(3, 178, 165, 0.1);
+    }
+    
+    .paragraph__exercise_beige-background {
+        background-color: #FFF3EB;
+    }
+    
+    .paragraph__flag {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .flag__element {
+        display: inline-block;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #2963A3;
+        position: relative;
+    }
+    
+    .flag__element_dot-after::after,
+    .flag__element_dot::before {
+        content: '.';
+        position: absolute;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1em;
+        color: #494949;
+    }
+    
+    .flag__element_dot-after::after {
+        left: calc(100% + 8px);
+    }
+    
+    .flag__element_dot-before::before {
+        left: -10px;
+    }
+    
+    .flag__element_dot-after:last-child::after {
+        content: '';
+    }
+    
+    .aside {
+        max-width: 282px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .aside__card-entry {
+        padding: 24px;
+        width: 100%;
+        background: #E6F0FD;
+        border-radius: 16px;
+        text-align: center;
+    }
+    
+    .card-entry__img {
+        width: 100%;
+    }
+    
+    .card-entry__header {
+        margin-top: 27px;
+        padding: 0 6px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .card-entry__description {
+        margin-top: 11px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333;
+    }
+    
+    .main-button {
+        width: 100%;
+        padding: 12px;
+        background: #35B3A9;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .marg-top24 {
+        margin-top: 24px;
+    }
+    
+    .asside__psychologist {
+        width: 100%;
+        padding: 16px 16px 36px 16px;
+        background: #FFFFFF;
+        border: 1px solid #DEDEDE;
+        border-radius: 16px;
+    }
+    
+    .psychologist__main-info {
+        padding-bottom: 16px;
+        text-align: center;
+        border-bottom: 1px solid #DEDEDE;
+        position: relative;
+    }
+    
+    .psychologist__type-connection {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .psychologist__type-connection li {
+        display: flex;
+        padding: 3px 6px;
+        gap: 4px;
+        background: rgba(243, 244, 248, 0.7);
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.25px;
+        color: #333333;
+    }
+    
+    .psychologist__img {
+        margin-top: 8px;
+        border-radius: 50%;
+    }
+    
+    .psychologist__name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: #333333;
+    }
+    
+    .psychologist__profession {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .psychologist__time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .psychologist__experience,
+    .psychologist__age {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #A2A7B1;
+    }
+    
+    .psychologist__dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #A2A7B1;
+    }
+    
+    .psychologist__description {
+        margin-top: 16px;
+    }
+    
+    .psychologist__direction-header {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+    }
+    
+    .psychologist__direction {
+        margin-top: 8px;
+        padding: 0;
+        list-style: none;
+        position: relative;
+    }
+    
+    .psychologist__direction li {
+        margin-left: 24px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333;
+    }
+    
+    .psychologist__direction li::before {
+        content: "\2022";
+        position: absolute;
+        left: 2px;
+        font-size: 3em;
+        line-height: 30%;
+        display: inline-block;
+        color: #03B2A5;
+    }
+    
+    .marg-top20 {
+        margin-top: 20px;
+    }
+    
+    .asside__advice {
+        width: 100%;
+        padding: 60px 15px 0 15px;
+        height: 292px;
+        border-radius: 16px;
+        background-image: url(/images/confetti.png);
+        background-color: #2963A3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        position: relative;
+    }
+    
+    .advice__text {
+        width: 100%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: #FFFFFF;
+    }
+    
+    .advice__img {
+        width: 100%;
+        margin-left: -15px;
+        bottom: 0;
+        position: absolute;
+    }
+    
+    .asside__courses {
+        width: 100%;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: #FFFFFF;
+        border: 1px solid #DEDEDE;
+        box-shadow: 0px 30px 50px #EFF5FB;
+        background-image: url(/images/smallPresents.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        border-radius: 24px;
+        position: relative;
+    }
+    
+    .courses__header {
+        display: flex;
+        gap: 4px;
+        align-items: end;
+    }
+    
+    .courses__counter,
+    .courses__header {
+        font-style: normal;
+        font-weight: 700;
+        color: #2963A3;
+    }
+    
+    .courses__counter {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .courses__header {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    
+    .courses__description {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #011632;
+    }
+    
+    .courses__buy {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .courses__cost {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #333333;
+    }
+    
+    .footer {
+        position: relative;
+    }
+    
+    .footer-container {
+        margin-top: 34px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer__description {
+        max-width: 348px;
+    }
+    
+    .footer__header {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: #333333;
+    }
+    
+    .footer__text {
+        margin-top: 24px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #333333;
+    }
+    
+    .marg-top32 {
+        margin-top: 32px;
+    }
+    
+    .max-width238 {
+        max-width: 238px;
+    }
+    
+    .footer__img-container {
+        width: 520px;
+        text-align: center;
+        background-image: url(/images/manAndWomanBackground.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .footer-right-img {
+        position: absolute;
+        top: 10%;
+        right: 0;
+    }
+    
+    .footer-bottom-img {
+        margin-top: 25px;
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .main {
+            flex-direction: column;
+        }
+        .article {
+            max-width: 100%;
+        }
+        .background-img,
+        .contents__list_second,
+        .paragraph__flag,
+        .footer {
+            display: none;
+        }
+        .contents__list {
+            margin-left: 33px;
+        }
+        .contents__list li::before {
+            content: "\2022";
+            position: absolute;
+            left: -28px;
+            font-size: 3em;
+            line-height: 30%;
+            display: inline-block;
+            color: #03B2A5;
+        }
+        .paragraph__image {
+            width: 100%;
+        }
+        .aside {
+            max-width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .asside__courses {
+            background-position: right;
+        }
+        .aside__card-entry,
+        .asside__psychologist,
+        .asside__advice,
+        .asside__courses {
+            width: 43%;
+            align-self: flex-start;
+            flex-grow: 1;
+            border: 1px solid #0063A8;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .container {
+            padding: 0 20px;
+        }
+        body {
+            width: 100%;
+        }
+        .blockquote-background {
+            margin-top: 24px;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        .article__info {
+            margin-top: 16px;
+        }
+        .article__contents {
+            margin-top: 12px;
+        }
+    }
+    
+    @media screen and (max-width: 414px) {
+        .paragraph__left-img-text,
+        .paragraph__left-img-text,
+        .paragraph__img-text {
+            flex-direction: column;
+        }
+        .left-img-text__image,
+        .left-img-text__image {
+            width: 100%;
+        }
+        .aside__card-entry,
+        .asside__psychologist,
+        .asside__advice,
+        .asside__courses {
+            width: 99%;
+            align-self: flex-start;
+            flex-grow: 1;
+            border: 1px solid #0063A8;
+        }
+        .blockquote_center {
+            padding: 24px 0 0 0;
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .container {
+            padding: 0 16px;
+        }
+        h1 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }

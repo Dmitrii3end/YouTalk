@@ -1,0 +1,143 @@
+html,
+body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #EFF5FB;
+    background: #FFFFFF;
+    z-index: 1;
+}
+
+.header__container {
+    width: 1264px;
+    margin: 0 auto;
+    display: flex;
+    gap: 36px;
+    padding: 0 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 51px;
+    height: 36px;
+    margin: 15px 0;
+    background: url(/images/Logo.svg);
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    padding-left: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.nav__element {
+    display: flex;
+    gap: 8px;
+    padding: 30px 15px;
+    font-size: 14px;
+}
+
+.nav__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333333;
+}
+
+.nav__link:visited {
+    color: #333333;
+}
+
+.link__button-more {
+    border: none;
+    background-image: url(/images/arrowDown.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header__button {
+    padding: 14px 20px;
+    background: #E3F5F5;
+    border-radius: 4px;
+    border: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #03B2A5;
+    cursor: pointer;
+}
+
+.header__burger {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.burger__span,
+.burger__span::before,
+.burger__span::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #03B2A5;
+    border-radius: 1px;
+    left: 0;
+}
+
+.burger__span {
+    margin-top: -1px;
+}
+
+.burger__span::before {
+    content: '';
+    top: -6px;
+}
+
+.burger__span::after {
+    content: '';
+    top: 6px;
+}
+
+@media screen and (max-width: 1264px) {
+    .header__container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    nav {
+        display: none;
+    }
+    .header__burger {
+        display: inline-block;
+    }
+}
